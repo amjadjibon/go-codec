@@ -2,6 +2,7 @@ package utility
 
 import (
 	"encoding/gob"
+	"github.com/amjadjibon/go-codec/errors"
 	codecGOB "github.com/amjadjibon/go-codec/gob"
 	"github.com/amjadjibon/go-codec/iface"
 	"github.com/amjadjibon/go-codec/json"
@@ -21,16 +22,10 @@ func init() {
 	gob.Register(codecGOB.CodecGOB{})
 }
 
-func GetCodec(name string) iface.Codec {
+func GetCodec(name string) (iface.Codec, error) {
 	var c = registry.CodecRegistry().GetCodec(name)
 	if c == nil {
-		return nil
+		return nil, errors.ErrCodecNotFound
 	}
-
-	v, ok := c.(iface.Codec)
-	if !ok {
-		return nil
-	}
-
-	return v
+	return c, nil
 }

@@ -20,7 +20,7 @@ func (e *ExampleJSON) Display() string {
 }
 
 func main() {
-	codec := utility.GetCodec(constant.JSON)
+	codec, _ := utility.GetCodec(constant.JSON)
 
 	fmt.Printf("name: %s\n", codec.Name())
 	fmt.Printf("version: %s\n", codec.Version())

@@ -4,6 +4,7 @@ import (
 	"encoding/gob"
 	"github.com/amjadjibon/go-codec/base32"
 	"github.com/amjadjibon/go-codec/base64"
+	"github.com/amjadjibon/go-codec/errors"
 	"github.com/amjadjibon/go-codec/hex"
 	"github.com/amjadjibon/go-codec/iface"
 	"github.com/amjadjibon/go-codec/registry"
@@ -15,16 +16,10 @@ func init() {
 	gob.Register(hex.EncoderHEX{})
 }
 
-func GetEncoder(name string) iface.Encoder {
-	var c = registry.EncoderRegistry().GetEncoder(name)
-	if c == nil {
-		return nil
+func GetEncoder(name string) (iface.Encoder, error) {
+	var e = registry.EncoderRegistry().GetEncoder(name)
+	if e == nil {
+		return nil, errors.ErrEncoderNotFound
 	}
-
-	v, ok := c.(iface.Encoder)
-	if !ok {
-		return nil
-	}
-
-	return v
+	return e, nil
 }

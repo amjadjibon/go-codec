@@ -7,10 +7,9 @@ import (
 )
 
 func TestCodecJSON(t *testing.T) {
-	codec := utility.GetCodec(constant.JSON)
-
-	if codec == nil {
-		t.Error("codec should not be nil")
+	codec, err := utility.GetCodec(constant.JSON)
+	if err != nil {
+		t.Error(err)
 	}
 
 	type example struct {

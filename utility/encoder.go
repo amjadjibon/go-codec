@@ -2,6 +2,7 @@ package utility
 
 import (
 	"encoding/gob"
+
 	"github.com/amjadjibon/go-codec/base32"
 	"github.com/amjadjibon/go-codec/base64"
 	"github.com/amjadjibon/go-codec/errors"

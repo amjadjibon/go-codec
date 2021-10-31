@@ -2,11 +2,12 @@ package hex
 
 import (
 	"encoding/hex"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )
 
-type EncoderHEX struct {}
+type EncoderHEX struct{}
 
 func (e EncoderHEX) Name() string {
 	return constant.HEX

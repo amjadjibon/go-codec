@@ -2,11 +2,12 @@ package base64
 
 import (
 	"encoding/base64"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )
 
-type EncoderBASE64 struct {}
+type EncoderBASE64 struct{}
 
 func (e EncoderBASE64) Name() string {
 	return constant.BASE64

@@ -2,6 +2,7 @@ package utility
 
 import (
 	"encoding/gob"
+
 	"github.com/amjadjibon/go-codec/errors"
 	codecGOB "github.com/amjadjibon/go-codec/gob"
 	"github.com/amjadjibon/go-codec/iface"

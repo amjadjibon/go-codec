@@ -1,8 +1,9 @@
 package registry
 
 import (
-	"github.com/amjadjibon/go-codec/iface"
 	"sync"
+
+	"github.com/amjadjibon/go-codec/iface"
 )
 
 var (

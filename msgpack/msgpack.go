@@ -1,12 +1,15 @@
 package msgpack
 
 import (
+	"fmt"
+
+	"github.com/vmihailenco/msgpack/v5"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
-	"github.com/vmihailenco/msgpack/v5"
 )
 
-type CodecMSGPACK struct {}
+type CodecMSGPACK struct{}
 
 func (c CodecMSGPACK) Name() string {
 	return constant.MSGPACK
@@ -21,6 +24,7 @@ func (c CodecMSGPACK) Marshal(v interface{}) ([]byte, error) {
 }
 
 func (c CodecMSGPACK) Unmarshal(b []byte, v interface{}) error {
+	fmt.Println()
 	return msgpack.Unmarshal(b, v)
 }
 

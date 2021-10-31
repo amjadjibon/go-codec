@@ -6,4 +6,3 @@ type Encoder interface {
 	Encode(src []byte) ([]byte, error)
 	Decode(src []byte) ([]byte, error)
 }
-

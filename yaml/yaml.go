@@ -6,7 +6,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-type CodecYAML struct {}
+type CodecYAML struct{}
 
 func (c CodecYAML) Name() string {
 	return constant.YAML

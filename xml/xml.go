@@ -2,11 +2,12 @@ package xml
 
 import (
 	"encoding/xml"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )
 
-type CodecXML struct {}
+type CodecXML struct{}
 
 func (c CodecXML) Name() string {
 	return constant.XML

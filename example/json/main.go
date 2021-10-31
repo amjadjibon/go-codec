@@ -3,6 +3,7 @@ package main
 import (
 	_ "embed"
 	"fmt"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/utility"
 )
@@ -11,7 +12,7 @@ import (
 var jsonBytes []byte
 
 type ExampleJSON struct {
-	Id int
+	Id   int
 	Name string
 }
 

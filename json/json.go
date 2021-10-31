@@ -2,11 +2,12 @@ package json
 
 import (
 	"encoding/json"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )
 
-type CodecJSON struct {}
+type CodecJSON struct{}
 
 func (c CodecJSON) Name() string {
 	return constant.JSON

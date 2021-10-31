@@ -3,6 +3,7 @@ package gob
 import (
 	"bytes"
 	"encoding/gob"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )

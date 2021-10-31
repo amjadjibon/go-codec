@@ -1,9 +1,10 @@
 package test
 
 import (
+	"testing"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/utility"
-	"testing"
 )
 
 func TestCodecJSON(t *testing.T) {

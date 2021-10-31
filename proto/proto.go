@@ -1,12 +1,13 @@
 package proto
 
 import (
+	"google.golang.org/protobuf/proto"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
-	"google.golang.org/protobuf/proto"
 )
 
-type CodecPROTO struct {}
+type CodecPROTO struct{}
 
 func (c CodecPROTO) Name() string {
 	return constant.PROTO

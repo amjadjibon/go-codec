@@ -2,11 +2,12 @@ package base32
 
 import (
 	"encoding/base32"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
 )
 
-type EncoderBASE32 struct {}
+type EncoderBASE32 struct{}
 
 func (e EncoderBASE32) Name() string {
 	return constant.BASE32

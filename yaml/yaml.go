@@ -1,9 +1,10 @@
 package yaml
 
 import (
+	"gopkg.in/yaml.v3"
+
 	"github.com/amjadjibon/go-codec/constant"
 	"github.com/amjadjibon/go-codec/registry"
-	"gopkg.in/yaml.v3"
 )
 
 type CodecYAML struct{}
